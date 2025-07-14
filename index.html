@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const getObjOwnKeys = obj => Object.keys(obj).length;
+
+        const getObjKeys = obj => {
+            let result = 0;
+            for(key in obj) {
+                result += 1;
+            }
+            return result;\
+        }
+
+        const user = {
+            company: "ICH"
+        }
+
+        const admin = {
+            name: "Bohdan",
+            lastName: "Liamzin"
+        };
+
+        admin.__proto__ = user;
+
+        // console.log(admin.company);
+        // console.log(getObjOwnKeys(admin));
+        console.log(getObjKeys(admin));
+    </script>
+</body>
+</html>
